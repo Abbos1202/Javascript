@@ -1,142 +1,218 @@
-// let account = "webbrin";
-
-// console.log(account);
-
-// let newObj1 = {};
-// let newObj2 = new Object();
-
-// console.log(newObj1, newObj2);
-
-// let account = {
+// let user = {
 //     name: "webbrain",
-//     major: "Front-End",
-//     founded: 2020,
-//     "full name": "webbrain IT academy",
-//     0: 12345,
+//     sayHi: function() {
+//         console.log("Hi");
+//     }
 // }
 
+// user.sayHi()
 
-// let name = "major"
-
-// console.log(account.name); // webbrain
-// console.log(account[name]); // Front-End
-
-
-// let key = "major";
-
-// console.log(account[key]);
-// console.log(account.major);
-// console.log(account["major"]);
-
-// console.log(account[0]);
-// console.log("full name");
-// console.log(account["name"]);
-// console.log(account.surname); // undefined
-
-
-// let account = {
-//     name: "webbrain",
-//     major: "Front-End",
-//     name: "webbrain IT academy" // eng oxiridagi name chiqadi
+// function sayHi() {
+//     console.log("Hi");
 // }
 
-// // Object.freeze(account)
-// Object.seal(account)
+// let name = "webbrain";
 
-// delete account.major
-
-// account.name = "Webbrain IT academy" // name ni qiymati yangilanadi
-
-// account.founded = 2022 // founded 2022 yonidan qo'shilib qoladi
-
-// console.log(account);
-
-
-// =====================================================================
-
-// reference
-
-// const account1 = {
-//     name: "Webbrain",
-//     major: "Frontend"
-// }
-
-// const account2 = {
-//     name: "Webbrain",
-//     major: "Frontend"
-// }
-
-// console.log(account1 === account2); // false
-
-
-// =================================================================
-
-// structuredClone
-
-// const account1 = {
-//     name: "Webbrain",
-//     major: "Frontend"
-// }
-
-// const account2 = structuredClone(account1)
-// account1.name = "webbrain academy"
-
-// console.log(account2);
-
-
-// ================================================================
-
-
-// let name = "Webbrain";
-// let major = "Frontend";
-
-// // const account2 = {
-// //     name: name,
-// //     major: major,
-// // }
-
-// const account = {
+// let user = {
+//     // name: "webbrain",
 //     name,
-//     major,
+//     // sayHi: sayHi
+//     // sayHi
+//     sayHi() {
+//        console.log("I said Hi");
+//     }
 // }
 
-// console.log(account);
+// user.sayHi()
 
-// =================================================================
-
-// key bor yoki yo'qligi
-
-// const account = {
+// let user = {
 //     name: "webbrain",
-//     major: 'front-end',
+//     sayHi() {
+//         // console.log(this);
+//         // console.log(user);
+//         // console.log(`Hi ${this.name}`);
+//         // console.log(`Hi ${user.name}`);
+//     },
+//     getName: function() {
+//        return () => {
+//         console.log(`Hi ${this.name}`);
+//        }
+//     }
 // }
 
-// console.log("name" in account); // true => chunki account da name degan key bor
+// // user.sayHi()
 
-// =================================================================
+// let usr = user;
 
-// Object.assign()
+// // user = null;
 
-// const account1 = {
-//     name: "webbrain",
-//     major: 'front-end',
+// usr.sayHi()
+// usr.getName()(); // curry function
+
+// function getName(name) {
+//     console.log(new.target);
+//     // this.name = name,
+//     // this.sayHi = function () {
+//     //     console.log("Hi", this.name);
+//     //     return 'hey'
+//     // }
 // }
 
-// const account2 = {};
+// new getName("Eshmat")
+// new getName("Toshmat").sayHi()
+// // console.log(new getName().name)
 
-// account1.name = "test";
+// let func = {};
 
-// Object.assign(account2, account1);
+// func.name = "Abbos"
 
+// console.log(func);
 
-const account = {
-    name: "webbrain",
-    major: 'front-end',
-    founded: 2020,
-    students: 10000,
-    mentors: 5,
-}
+let id1 = Symbol("id");
+let id2 = Symbol("id");
 
-for(let i in account){
-    console.log(i);
-}
+// console.log(id1); // Symbol(id)
+// console.log(id1 == id2); // false
+// console.log(id1 === id2); // false
+
+// let obj = {
+//     id1: "webbrain",
+//     [id1]: "webbrain",
+//     ["id2"]: "academy1",
+//     id2: "academy2",
+//     id2: "academy3",
+// }
+
+// // console.log(obj["id1"]); // webbrain
+// // console.log(obj[id1]); // webbrain
+// // console.log(obj[id2]); // undefined
+// // console.log(obj["id2"]); // academy
+// console.log(obj.id2);
+
+// let obj ={
+//     name: "Webbrain",
+//     title: "IT center",
+//     age: 23,
+//     child: {
+//         childname: "testing name"
+//     }
+// }
+
+// const {name: newName, title, age, child: {childname: test}} = obj
+
+// console.log(test);
+// console.log(newName);
+// console.log(title);
+// console.log(age);
+
+// console.log("title" in obj); // true
+
+// for(value in obj) {
+//     // console.log(value);
+//     console.log(obj[value]);
+//     console.log(obj.value);
+// }
+
+// let obj = {
+//     child: {
+//         childname: "testing name"
+//     }
+// }
+
+// console.log(obj);
+
+// obj = { ...obj.child }
+
+// console.log(obj);
+
+// let obj = {
+//     name: "Webbrain",
+//     age: 23,
+// }
+
+// console.log({obj, name: "IT center"}); // { obj: { name: 'Webbrain', age: 23 }, name: 'IT center' }
+// console.log({...obj, name: "IT center"}); // { name: 'IT center', age: 23 }
+// console.log({ name: "IT center", ...obj}); // { name: 'Webbrain', age: 23 }
+// console.log({ name: "IT center", age: 23, name: "Webbrain"}); // { name: 'Webbrain', age: 23 }
+
+// let obj = {
+//     name: "Webbrain",
+//     age: 32,
+//     child: {
+//         name: "Eshmat",
+//         age: 23,
+//         child: {
+//             name: "Shumbola",
+//             age: 18,
+//         }
+//     }
+// }
+
+// let sum = 0;
+
+// while (obj) {
+//     sum += obj.age
+//     obj = obj.child
+// }
+
+// console.log(sum);
+
+// while (1) {
+//     if (obj) sum += obj.age
+//     else break;
+//     obj = obj.child
+// }
+
+// console.log(sum);
+
+// while(1) {
+//     if(obj) {
+//         // console.log(obj.age);
+//         // sum = sum + obj.age
+//         sum += obj.age
+//     }else{
+//         break;
+//     }
+//     obj = obj.child
+// }
+
+// let obj1 = {name: "webbrain"}
+// let obj2 = {name: "webbrain"}
+// let obj3 = obj1
+
+// obj1.name = "academy"
+
+// console.log(obj1 == obj2); // false
+// console.log(obj1 === obj2); // false
+// console.log(obj1 === obj3); // true
+// console.log(obj1); // {name: "academy"}
+// console.log(obj3); // {name: "academy"}
+
+// obj1 = {name: "webbrain"}
+
+// console.log(obj1); // {name: "webbrain"}
+// console.log(obj3); // {name: "academy"}
+
+// const employee = {
+//     id: 1,
+//     name: "Abbos",
+//     surname: "Ibrokhimov",
+//     occupation: "Frontend developer",
+//     age: 21,
+// }
+
+// // console.log(employee.id, employee.name, employee.surname, employee.occupation, employee.age)
+
+// const {id, name, surname, occupation, age} = employee
+
+// console.log(id, name, surname, occupation, age)
+
+const obj = {
+  name: "John",
+  age: 24,
+  status: "developer",
+};
+
+const anotherobj = { ...obj };
+
+console.log(anotherobj);
