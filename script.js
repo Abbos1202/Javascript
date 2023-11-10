@@ -1,87 +1,138 @@
-// if else
+// While vs do while
 
-// let temp = sovuq; // issiq sovuq yomg'ir qor bulut
+// let i = 3;
 
-// if(temp === issiq){
-//     console.log("Havo issiq, yengil kiyinib oling");
-// }else if (temp === sovuq) {
-//     console.log("Havo sovuq, qalin kiyinib oling");
-// }else if(temp === yomgir) {
-//     console.log("Havo yomg'ir, soyabon olib oling");
-// }else if (temp === qor){
-//     console.log("Havo qor, qalin kiyinib oling, soyabon oling");
-// }else if (temp === bulut){
-//     console.log("Havo bulut, yomg'ir yog'ishi mumkin, soyabon olib oling");
-// }else {
-//     console.log("No'malum ob-havo");
+// while(i){
+//     console.log(i);
+//     i--
 // }
 
+// do{
+//     console.log(i);
+//     i--
+// }while(i)
 
-// temp = 0;
+// ======================================
+// ======================================
 
-// if(temp < 0) {
-//     console.log("Havo juda sovuq");
-// }else if(temp < 25 && temp > 15) {
-//     console.log("Havo juda issiq");
-// }else if(temp < 15 && temp > 10) {
-//     console.log("Havo issiq");
-// }else if(temp < 10 && temp > 0) {
-//     console.log("Havo sovuq");
-// }else {
-//     console.log("Not found");
+// Function declaration
+
+// function getAvr() {
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("Hi Webbbrain");
+//     console.log("========================");
 // }
 
-// if ('condition'){'code'}
-// else if('condition'){'code'}
-// else{'code'}
+// getName()
 
-// ES 6 extension
+// function getName(){
+//     console.log("Abdulloh");
+// }
 
-// if ('condition') console.log('Havo juda issiq');
-// else if ('condition') return true;
-// else return false;
+// getName()
 
-// if (temp < 0) console.log("Havo juda sovuq");
-// else if (temp < 25 && temp > 15) console.log("Havo juda issiq");
-// else if (temp < 15 && temp > 10) console.log("Havo issiq");
-// else if (temp < 10 && temp > 0) console.log("Havo sovuq");
-// else console.log("Not found");
+// =======================
+// =======================
 
-// =============================================
+// Function expression 
 
-// Ternary ? :
+// const getAvr = function(){
+//     console.log("Abdulloh, Welcome to Webbrain");
+// }
 
-// temp < 0 ? ===  if (temp < 0) 
-//  :  === else
-// temp = 25;
+// getAvr()
 
-// temp < 0 ? console.log("Havo juda sovuq") : console.log("Not found");
+// Parametr => 
 
-// temp < 0
-//  ? console.log("Havo juda sovuq")
-//  : temp < 10
-//  ? console.log("Havo sovuq")
-//  : temp < 15
-//  ? console.log("Havo issiq")
-//  : console.log("Havo juda issiq");
+// const getAvr = function(name){ => name => parametr
+//     console.log(`${name}, Welcome to Webbrain`);
+// }
 
-// ==============================
+// getAvr("Abbosbek")  => argument
+// getAvr("Firdavs")
+// getAvr("Azizbek")
+// getAvr("Sirojiddin")
+// getAvr("Murodjon")
 
-// Nullish ?? => null undefined
+// const getAvr = function(name, surname, age){ 
+//     console.log(`Name: ${name}`);
+//     console.log(`Surname: ${surname}`);
+//     console.log(`Age: ${age}`);
+//     console.log("=======================");
+// }
 
-// console.log(false || 1); // 1
-// console.log(false ?? 1); // false
+// getAvr("Abbosbek", "Ibrohimov", 21)
+// getAvr("Firdavs", "Nazarov", 24)
+// getAvr("Azizbek", "Juraev", 28)
+// getAvr("Sirojiddin", "Tangirov",30)
+// getAvr("Sardorbek", "Tursunboyev", 25)
 
-// console.log(NaN || 1); // 1
-// console.log(NaN ?? 1); // NaN
+// Shadow variable => 
 
-// console.log(null || 1); // 1
-// console.log(null ?? 1); // 1
+// let name = "Webbrain";
 
-// console.log(undefined || 1); // 1
-// console.log(undefined ?? 1); // 1
+// Arrow function =>
 
-// console.log(2 * 2); // 2 ** 2
-// console.log(2 * 2 * 2); // 2 ** 3
-// console.log(2 * 2 * 2 * 2); // 2 ** 4
-// console.log(2 ** 50); 
+// const test = ()=> {
+//    let name = "Academy";
+//    console.log(name);
+// }
+// console.log(name);
+// test()
+
+
+// Default parametr => 
+
+// const telegram = (name, surname) => {
+//     // if(surname) console.log(name, surname);
+//     // else console.log(name);
+
+//     // ? :
+//     // surname ? console.log(name, surname) : console.log(name);
+
+//     // ||
+//     console.log(name, surname || "");
+// }
+
+// telegram("Webbrain");
+
+// function with return
+
+// // const gpa = "() => {}";
+// const gpa = () => {
+//     return "okay?"
+// };
+
+// // console.log(gpa);
+// console.log(gpa());
+
+// const calcGpa = (a = 0, b = 0, c = 0, d = 0) => {
+//     let res = (a + b + c + d) / 4
+//     // console.log(res);
+//     return res
+//     // return "okay!"
+// }
+// console.log(calcGpa(5, 3, 3, 2));
+
+
+// const getNum = (a) => {
+//     // console.log(a);
+//     let total = 193;
+//     console.log((a * 100) / total);
+//     return (a * 100) / total;
+// }
+
+// console.log(parseInt(getNum(159)));
