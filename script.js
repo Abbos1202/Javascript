@@ -1,81 +1,87 @@
-// switch case
+// if else
 
-// if (condition === 'yomgir'){
-//     console.log('bugun yomgir');
+// let temp = sovuq; // issiq sovuq yomg'ir qor bulut
+
+// if(temp === issiq){
+//     console.log("Havo issiq, yengil kiyinib oling");
+// }else if (temp === sovuq) {
+//     console.log("Havo sovuq, qalin kiyinib oling");
+// }else if(temp === yomgir) {
+//     console.log("Havo yomg'ir, soyabon olib oling");
+// }else if (temp === qor){
+//     console.log("Havo qor, qalin kiyinib oling, soyabon oling");
+// }else if (temp === bulut){
+//     console.log("Havo bulut, yomg'ir yog'ishi mumkin, soyabon olib oling");
+// }else {
+//     console.log("No'malum ob-havo");
 // }
 
-// switch(variable){
-//     case "yomgir" : console.log('bugun yomgir');
+
+// temp = 0;
+
+// if(temp < 0) {
+//     console.log("Havo juda sovuq");
+// }else if(temp < 25 && temp > 15) {
+//     console.log("Havo juda issiq");
+// }else if(temp < 15 && temp > 10) {
+//     console.log("Havo issiq");
+// }else if(temp < 10 && temp > 0) {
+//     console.log("Havo sovuq");
+// }else {
+//     console.log("Not found");
 // }
 
-// let data = 'sovuq'; // issiq sovuq qor yomgir bulut
+// if ('condition'){'code'}
+// else if('condition'){'code'}
+// else{'code'}
 
-// switch (data) {
-//     case 'issiq': console.log('bugun havo issiq'); break
-//     case 'yomgir': console.log('bugun yomgir yogadi'); break
-//     case 'sovuq': console.log('bugun havo sovuq'); break
-//     case 'qor': console.log('bugun qor yogadi'); break
-//     case 'bulut': console.log('bugun havo bulutli'); break
-//     default : console.log('Not found');
-// }
+// ES 6 extension
 
-// ====================================================
+// if ('condition') console.log('Havo juda issiq');
+// else if ('condition') return true;
+// else return false;
 
-// for loop
+// if (temp < 0) console.log("Havo juda sovuq");
+// else if (temp < 25 && temp > 15) console.log("Havo juda issiq");
+// else if (temp < 15 && temp > 10) console.log("Havo issiq");
+// else if (temp < 10 && temp > 0) console.log("Havo sovuq");
+// else console.log("Not found");
 
-// for(boshlanish, shart, step){}
+// =============================================
 
-// for(i = 1; i <= 10; i = i+2){
-//     // console.log('hi webbrain');
-//     console.log(i);
-// }
+// Ternary ? :
 
-// let i = 1;
+// temp < 0 ? ===  if (temp < 0) 
+//  :  === else
+// temp = 25;
 
-// for(; i < 12; ) {
-//     console.log(i);
-//     i++
-// }
+// temp < 0 ? console.log("Havo juda sovuq") : console.log("Not found");
 
-// var sum = 0;
+// temp < 0
+//  ? console.log("Havo juda sovuq")
+//  : temp < 10
+//  ? console.log("Havo sovuq")
+//  : temp < 15
+//  ? console.log("Havo issiq")
+//  : console.log("Havo juda issiq");
 
-// for (i = 1; i < 12; i++) {
-//     // console.log(sum += i);
-//     // if (sum === 10) break;
-//     console.log(`Sum = ${sum} + ${i} = ${(sum += i)}`);
-//     if (sum === 10) break;
-// }
+// ==============================
 
-// for (i = 1; i < 12; i++) {
-//     console.log(i);
-//     i += i * 2
-// }
+// Nullish ?? => null undefined
 
-// for (i = 1; i < 12; i++) {
-//     // console.log(i % 2);
-//     if(i % 2 === 0) console.log(`juft son ${i}`);
-//     else console.log(`toq son ${i}`);
-// }
+// console.log(false || 1); // 1
+// console.log(false ?? 1); // false
 
-// for (i = 1; i <= 12; i++) {
-//     // console.log(i % 2);
-//     if(i % 3 === 0) continue;
-//     console.log(i);
-// }
+// console.log(NaN || 1); // 1
+// console.log(NaN ?? 1); // NaN
 
-// outer: for (i = 1; i <= 10; i+=3) {
-//    inner: for(j = 1; j <= 10; j+=3 ){
-//       console.log(j, "j");
-//    }
-//    console.log(i, "i");
-// }
+// console.log(null || 1); // 1
+// console.log(null ?? 1); // 1
 
-// let i = 1;
+// console.log(undefined || 1); // 1
+// console.log(undefined ?? 1); // 1
 
-// for (i = 1; i <= 10; i++) {
-//   for (j = 1; j <= 10; j++) {
-//     console.log(`${i} X ${j} = ${i * j}`);
-//   }
-//   console.log("====================")
-// }
-
+// console.log(2 * 2); // 2 ** 2
+// console.log(2 * 2 * 2); // 2 ** 3
+// console.log(2 * 2 * 2 * 2); // 2 ** 4
+// console.log(2 ** 50); 
