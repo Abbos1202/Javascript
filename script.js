@@ -1,131 +1,87 @@
-// let b = 1;
-// let a = "2";
+// if else
 
-// let str1 = "webbrain";
-// let str2 = "academy";
+// let temp = sovuq; // issiq sovuq yomg'ir qor bulut
 
-// console.log(str1 + str2);
-// console.log(isNaN(a));
+// if(temp === issiq){
+//     console.log("Havo issiq, yengil kiyinib oling");
+// }else if (temp === sovuq) {
+//     console.log("Havo sovuq, qalin kiyinib oling");
+// }else if(temp === yomgir) {
+//     console.log("Havo yomg'ir, soyabon olib oling");
+// }else if (temp === qor){
+//     console.log("Havo qor, qalin kiyinib oling, soyabon oling");
+// }else if (temp === bulut){
+//     console.log("Havo bulut, yomg'ir yog'ishi mumkin, soyabon olib oling");
+// }else {
+//     console.log("No'malum ob-havo");
+// }
 
-// console.log(b * a);
-// console.log(+a - b);
 
-// ==========
-// let a = "10";
-// let b = "10.3";
+// temp = 0;
 
-// console.log(Number(b));
-// console.log(Number.parseInt(b));
-// console.log(Number.parseFloat(b));
-// console.log(parseFloat(b));
-// console.log(parseInt(b));
+// if(temp < 0) {
+//     console.log("Havo juda sovuq");
+// }else if(temp < 25 && temp > 15) {
+//     console.log("Havo juda issiq");
+// }else if(temp < 15 && temp > 10) {
+//     console.log("Havo issiq");
+// }else if(temp < 10 && temp > 0) {
+//     console.log("Havo sovuq");
+// }else {
+//     console.log("Not found");
+// }
 
-// console.log(Number(a));
-// console.log(Number.parseInt(a));
-// console.log(Number.parseFloat(a));
+// if ('condition'){'code'}
+// else if('condition'){'code'}
+// else{'code'}
 
-// ==========
-// true = 1, '1',
-// false -> 0,
-// console.log(false == 0);
-// console.log(true == 1);
-// console.log(false == null);
-// console.log(false == undefined);
-// console.log(undefined == null);
+// ES 6 extension
 
-// console.log(true == "1");
-// console.log(true == "a");
-// console.log(true == "2");
-// console.log(true == "0");
+// if ('condition') console.log('Havo juda issiq');
+// else if ('condition') return true;
+// else return false;
 
-// ==========
-// let a = 1;
-// let b = "10";
+// if (temp < 0) console.log("Havo juda sovuq");
+// else if (temp < 25 && temp > 15) console.log("Havo juda issiq");
+// else if (temp < 15 && temp > 10) console.log("Havo issiq");
+// else if (temp < 10 && temp > 0) console.log("Havo sovuq");
+// else console.log("Not found");
 
-// console.log(1 + (1 * 1) / 1);
-// console.log(((1 + 1) * 1) / 1);
+// =============================================
 
-// ========== --, ++
-// a++
-// a = a+1
+// Ternary ? :
 
-// let a = 11; //1
-// console.log(a--); //11
-// console.log(a); // 12
-// console.log(++a); //13
-// console.log(a); // 13
-// console.log(a++); // 13
-// console.log(a++); // 14
-// console.log(++a); // 16
+// temp < 0 ? ===  if (temp < 0) 
+//  :  === else
+// temp = 25;
 
-// ==========
+// temp < 0 ? console.log("Havo juda sovuq") : console.log("Not found");
 
-// Obrivations
-// let a = 50;
+// temp < 0
+//  ? console.log("Havo juda sovuq")
+//  : temp < 10
+//  ? console.log("Havo sovuq")
+//  : temp < 15
+//  ? console.log("Havo issiq")
+//  : console.log("Havo juda issiq");
 
-// a = a + 10; // 50+10=60
-// a += 10; // 60+10=70
+// ==============================
 
-// console.log(a);
+// Nullish ?? => null undefined
 
-// ==========
-// Comparision
-// let a = 10;
-// let b = 11; //number
-// let c = "11"; // string
+// console.log(false || 1); // 1
+// console.log(false ?? 1); // false
 
-// =, ==, ==
+// console.log(NaN || 1); // 1
+// console.log(NaN ?? 1); // NaN
 
-// console.log(a > b);
-// console.log(a < b);
-// console.log(c < b);
-// console.log(c <= b);
-// console.log(c >= b);
-// console.log(c == b);
-// console.log(c === b);
-// console.log(c =< b); wrong syn
+// console.log(null || 1); // 1
+// console.log(null ?? 1); // 1
 
-// let str1 = "A";
-// let str2 = "a";
+// console.log(undefined || 1); // 1
+// console.log(undefined ?? 1); // 1
 
-// console.log(str1 > str2);
-// console.log(str1 < str2);
-// console.log("sutr1" < "str2");
-
-// let a = 1;
-// let b = 1;
-// let check = true;
-
-// console.log(a == b); // !=
-// console.log(a === b); //!==
-// console.log(a != b);
-// console.log(check);
-// console.log(!check);
-
-// ==========
-// Logical Operations
-// OR ||
-// let ceo = false;
-// let admin = true;
-
-// console.log(time === true || ceo === true);
-// console.log(false || true);
-// console.log(admin || ceo);
-
-// let time = 11;
-// console.log(admin === true || ceo === true);
-
-// AND &&
-
-// Europe
-let id = false;
-let face = true;
-
-console.log(id && face);
-
-// uzbek
-let galustik = true;
-let soqol = true;
-let pul = true;
-
-console.log(galustik && soqol && pul);
+// console.log(2 * 2); // 2 ** 2
+// console.log(2 * 2 * 2); // 2 ** 3
+// console.log(2 * 2 * 2 * 2); // 2 ** 4
+// console.log(2 ** 50); 
