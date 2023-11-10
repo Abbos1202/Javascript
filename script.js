@@ -1,138 +1,142 @@
-// While vs do while
+// let account = "webbrin";
 
-// let i = 3;
+// console.log(account);
 
-// while(i){
-//     console.log(i);
-//     i--
+// let newObj1 = {};
+// let newObj2 = new Object();
+
+// console.log(newObj1, newObj2);
+
+// let account = {
+//     name: "webbrain",
+//     major: "Front-End",
+//     founded: 2020,
+//     "full name": "webbrain IT academy",
+//     0: 12345,
 // }
 
-// do{
-//     console.log(i);
-//     i--
-// }while(i)
 
-// ======================================
-// ======================================
+// let name = "major"
 
-// Function declaration
+// console.log(account.name); // webbrain
+// console.log(account[name]); // Front-End
 
-// function getAvr() {
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("Hi Webbbrain");
-//     console.log("========================");
+
+// let key = "major";
+
+// console.log(account[key]);
+// console.log(account.major);
+// console.log(account["major"]);
+
+// console.log(account[0]);
+// console.log("full name");
+// console.log(account["name"]);
+// console.log(account.surname); // undefined
+
+
+// let account = {
+//     name: "webbrain",
+//     major: "Front-End",
+//     name: "webbrain IT academy" // eng oxiridagi name chiqadi
 // }
 
-// getName()
+// // Object.freeze(account)
+// Object.seal(account)
 
-// function getName(){
-//     console.log("Abdulloh");
+// delete account.major
+
+// account.name = "Webbrain IT academy" // name ni qiymati yangilanadi
+
+// account.founded = 2022 // founded 2022 yonidan qo'shilib qoladi
+
+// console.log(account);
+
+
+// =====================================================================
+
+// reference
+
+// const account1 = {
+//     name: "Webbrain",
+//     major: "Frontend"
 // }
 
-// getName()
-
-// =======================
-// =======================
-
-// Function expression 
-
-// const getAvr = function(){
-//     console.log("Abdulloh, Welcome to Webbrain");
+// const account2 = {
+//     name: "Webbrain",
+//     major: "Frontend"
 // }
 
-// getAvr()
+// console.log(account1 === account2); // false
 
-// Parametr => 
 
-// const getAvr = function(name){ => name => parametr
-//     console.log(`${name}, Welcome to Webbrain`);
+// =================================================================
+
+// structuredClone
+
+// const account1 = {
+//     name: "Webbrain",
+//     major: "Frontend"
 // }
 
-// getAvr("Abbosbek")  => argument
-// getAvr("Firdavs")
-// getAvr("Azizbek")
-// getAvr("Sirojiddin")
-// getAvr("Murodjon")
+// const account2 = structuredClone(account1)
+// account1.name = "webbrain academy"
 
-// const getAvr = function(name, surname, age){ 
-//     console.log(`Name: ${name}`);
-//     console.log(`Surname: ${surname}`);
-//     console.log(`Age: ${age}`);
-//     console.log("=======================");
-// }
+// console.log(account2);
 
-// getAvr("Abbosbek", "Ibrohimov", 21)
-// getAvr("Firdavs", "Nazarov", 24)
-// getAvr("Azizbek", "Juraev", 28)
-// getAvr("Sirojiddin", "Tangirov",30)
-// getAvr("Sardorbek", "Tursunboyev", 25)
 
-// Shadow variable => 
+// ================================================================
+
 
 // let name = "Webbrain";
+// let major = "Frontend";
 
-// Arrow function =>
+// // const account2 = {
+// //     name: name,
+// //     major: major,
+// // }
 
-// const test = ()=> {
-//    let name = "Academy";
-//    console.log(name);
-// }
-// console.log(name);
-// test()
-
-
-// Default parametr => 
-
-// const telegram = (name, surname) => {
-//     // if(surname) console.log(name, surname);
-//     // else console.log(name);
-
-//     // ? :
-//     // surname ? console.log(name, surname) : console.log(name);
-
-//     // ||
-//     console.log(name, surname || "");
+// const account = {
+//     name,
+//     major,
 // }
 
-// telegram("Webbrain");
+// console.log(account);
 
-// function with return
+// =================================================================
 
-// // const gpa = "() => {}";
-// const gpa = () => {
-//     return "okay?"
-// };
+// key bor yoki yo'qligi
 
-// // console.log(gpa);
-// console.log(gpa());
-
-// const calcGpa = (a = 0, b = 0, c = 0, d = 0) => {
-//     let res = (a + b + c + d) / 4
-//     // console.log(res);
-//     return res
-//     // return "okay!"
-// }
-// console.log(calcGpa(5, 3, 3, 2));
-
-
-// const getNum = (a) => {
-//     // console.log(a);
-//     let total = 193;
-//     console.log((a * 100) / total);
-//     return (a * 100) / total;
+// const account = {
+//     name: "webbrain",
+//     major: 'front-end',
 // }
 
-// console.log(parseInt(getNum(159)));
+// console.log("name" in account); // true => chunki account da name degan key bor
+
+// =================================================================
+
+// Object.assign()
+
+// const account1 = {
+//     name: "webbrain",
+//     major: 'front-end',
+// }
+
+// const account2 = {};
+
+// account1.name = "test";
+
+// Object.assign(account2, account1);
+
+
+const account = {
+    name: "webbrain",
+    major: 'front-end',
+    founded: 2020,
+    students: 10000,
+    mentors: 5,
+}
+
+for(let i in account){
+    console.log(i);
+}
