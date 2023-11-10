@@ -1,218 +1,106 @@
-// let user = {
-//     name: "webbrain",
-//     sayHi: function() {
-//         console.log("Hi");
-//     }
-// }
+// Numbers
 
-// user.sayHi()
+// ---Numbers representation
+// ---Decimal, Binary va Hex
+// ---Math => abs, floor, ceil, round trunc, random, min, max, pow, sign, sqbrt, cbrt
+// ---Methods => toString, toFixed, parseInt, parseFloat, isNaN, Object.is, toPrecision
+// ---Strang JS
+// ---Optional chaining
 
-// function sayHi() {
-//     console.log("Hi");
-// }
+// console.log(1_000_000 + 1);
+// console.log(12.23382);
+// console.log(1e6);
+// console.log(1e6 + 1);
+// console.log(1e-6); // kasrga o'tib ketadi = 0.000001
+// console.log(1e500); // Infinity
 
-// let name = "webbrain";
+// console.log(0.1 + 0.2); // 0.30000000000000004
+// console.log(0.1 + 0.2 === 0.3); 
+// console.log(0.2 + 0.2 === 0.4); 
+// console.log(0.3 + 0.4 === 0.7); 
 
-// let user = {
-//     // name: "webbrain",
-//     name,
-//     // sayHi: sayHi
-//     // sayHi
-//     sayHi() {
-//        console.log("I said Hi");
-//     }
-// }
+// let num = "0.1 + 0.2 * 3";
 
-// user.sayHi()
+// console.log(+num.toFixed(1));  
 
-// let user = {
-//     name: "webbrain",
-//     sayHi() {
-//         // console.log(this);
-//         // console.log(user);
-//         // console.log(`Hi ${this.name}`);
-//         // console.log(`Hi ${user.name}`);
-//     },
-//     getName: function() {
-//        return () => {
-//         console.log(`Hi ${this.name}`);
-//        }
-//     }
-// }
+// console.log(parseInt(num)); 
+// console.log(parseFloat(num)); 
+// console.log(Number(num));
+// console.log(Number(eval(num))); 
+// console.log(eval(num)); 
+// console.log(Number.parseInt(num));
+// console.log(Number.parseFloat(num)); 
 
-// // user.sayHi()
+// console.log(+"1_000" + 1); // NaN
 
-// let usr = user;
+// let num = 5;
 
-// // user = null;
+// console.log(num.toString(16)); 
+// console.log(parseInt("5", 16)); 
 
-// usr.sayHi()
-// usr.getName()(); // curry function
 
-// function getName(name) {
-//     console.log(new.target);
-//     // this.name = name,
-//     // this.sayHi = function () {
-//     //     console.log("Hi", this.name);
-//     //     return 'hey'
-//     // }
-// }
+// console.log(isNaN(+"1000")); // false
+// console.log(isNaN(+"1_000")); // true
 
-// new getName("Eshmat")
-// new getName("Toshmat").sayHi()
-// // console.log(new getName().name)
 
-// let func = {};
+// let obj1 = Object.is("web", "webb"); // false
+// let obj2 = Object.is("web", "web"); // true
+// let obj3 = Object.is(123, 1234); // false
+// let obj4 = Object.is(123, 123); // true
 
-// func.name = "Abbos"
+// console.log(obj4);
 
-// console.log(func);
+// let num1 = 5.122717;
+// let num2 = 0.0005022717;
 
-let id1 = Symbol("id");
-let id2 = Symbol("id");
+// console.log(num1.toPrecision(2));
+// console.log(num2.toPrecision(3)); 
 
-// console.log(id1); // Symbol(id)
-// console.log(id1 == id2); // false
-// console.log(id1 === id2); // false
+// console.log(9_999_999_999_999_999);  // 10000000000000000
 
-// let obj = {
-//     id1: "webbrain",
-//     [id1]: "webbrain",
-//     ["id2"]: "academy1",
-//     id2: "academy2",
-//     id2: "academy3",
-// }
+// Math methods
 
-// // console.log(obj["id1"]); // webbrain
-// // console.log(obj[id1]); // webbrain
-// // console.log(obj[id2]); // undefined
-// // console.log(obj["id2"]); // academy
-// console.log(obj.id2);
+// console.log(Math.PI); // 3.14
+// console.log(Math.abs(10));
+// console.log(Math.abs(-10)); 
+// console.log(Math.round(2.5)); 
+// console.log(Math.round(2.4)); 
+// console.log(Math.floor(2.999)); 
+// console.log(Math.ceil(2.0001)); 
+// console.log(Math.trunc(2.999)); 
 
-// let obj ={
-//     name: "Webbrain",
-//     title: "IT center",
-//     age: 23,
-//     child: {
-//         childname: "testing name"
-//     }
-// }
+// console.log(Math.floor(-10.999)); // -11
+// console.log(Math.trunc(-10.999)); // -10
 
-// const {name: newName, title, age, child: {childname: test}} = obj
+// console.log(Math.random());
+// console.log(Math.random() * 10);
+// console.log(Math.trunc(Math.random() * 10));
+// console.log(parseInt(Math.random() * 10));
 
-// console.log(test);
-// console.log(newName);
-// console.log(title);
-// console.log(age);
+// console.log(Math.min(1, 3, 5, 0, 10, 9, 98, 1000, 1245)); 
+// console.log(Math.max(1, 3, 5, 0, 10, 9, 98, 1000, 1245)); 
 
-// console.log("title" in obj); // true
+// console.log(Math.pow(5, 2)); 
+// console.log(5 ** 2); 
 
-// for(value in obj) {
-//     // console.log(value);
-//     console.log(obj[value]);
-//     console.log(obj.value);
-// }
+// console.log(Math.sqrt(9));
+// console.log(Math.cbrt(27)); 
 
-// let obj = {
-//     child: {
-//         childname: "testing name"
-//     }
-// }
+// console.log(Math.sign(-0)); // -0
+// console.log(Math.sign(0)); // 0
+// console.log(Math.sign(1)); // 1
+// console.log(Math.sign(-1)); // -1
+// console.log(Math.sign(5)); // 1
+// console.log(Math.sign(-5)); // -1
+// console.log(Math.sign("123")); // -1
+// console.log(Math.sign("-123")); // -1
+// console.log(Math.sign("123a")); // NaN
 
-// console.log(obj);
+let obj = { name: "Abbos", child: { name: "Child name" } };
+let obj1 = { name: "Abbos", child: null };
 
-// obj = { ...obj.child }
-
-// console.log(obj);
-
-// let obj = {
-//     name: "Webbrain",
-//     age: 23,
-// }
-
-// console.log({obj, name: "IT center"}); // { obj: { name: 'Webbrain', age: 23 }, name: 'IT center' }
-// console.log({...obj, name: "IT center"}); // { name: 'IT center', age: 23 }
-// console.log({ name: "IT center", ...obj}); // { name: 'Webbrain', age: 23 }
-// console.log({ name: "IT center", age: 23, name: "Webbrain"}); // { name: 'Webbrain', age: 23 }
-
-// let obj = {
-//     name: "Webbrain",
-//     age: 32,
-//     child: {
-//         name: "Eshmat",
-//         age: 23,
-//         child: {
-//             name: "Shumbola",
-//             age: 18,
-//         }
-//     }
-// }
-
-// let sum = 0;
-
-// while (obj) {
-//     sum += obj.age
-//     obj = obj.child
-// }
-
-// console.log(sum);
-
-// while (1) {
-//     if (obj) sum += obj.age
-//     else break;
-//     obj = obj.child
-// }
-
-// console.log(sum);
-
-// while(1) {
-//     if(obj) {
-//         // console.log(obj.age);
-//         // sum = sum + obj.age
-//         sum += obj.age
-//     }else{
-//         break;
-//     }
-//     obj = obj.child
-// }
-
-// let obj1 = {name: "webbrain"}
-// let obj2 = {name: "webbrain"}
-// let obj3 = obj1
-
-// obj1.name = "academy"
-
-// console.log(obj1 == obj2); // false
-// console.log(obj1 === obj2); // false
-// console.log(obj1 === obj3); // true
-// console.log(obj1); // {name: "academy"}
-// console.log(obj3); // {name: "academy"}
-
-// obj1 = {name: "webbrain"}
-
-// console.log(obj1); // {name: "webbrain"}
-// console.log(obj3); // {name: "academy"}
-
-// const employee = {
-//     id: 1,
-//     name: "Abbos",
-//     surname: "Ibrokhimov",
-//     occupation: "Frontend developer",
-//     age: 21,
-// }
-
-// // console.log(employee.id, employee.name, employee.surname, employee.occupation, employee.age)
-
-// const {id, name, surname, occupation, age} = employee
-
-// console.log(id, name, surname, occupation, age)
-
-const obj = {
-  name: "John",
-  age: 24,
-  status: "developer",
-};
-
-const anotherobj = { ...obj };
-
-console.log(anotherobj);
+console.log(obj); // { name: 'Abbos', child: { name: 'Child name' } }
+console.log(obj.name); // Abbos
+console.log(obj.age); // undefined
+console.log(obj.child?.name); // undefined
+console.log(obj.child?.age); // undefined
